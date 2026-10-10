@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #121212;
+  --color-surface: #1C1C1C;
+  --color-primary: #ECECEC;
+  --color-secondary: #9D9A96;
+  --color-accent: #B9B4AE;
+  --color-danger: #EF4444;
+  --color-warning: #F59E0B;
+  --color-textMain: #ECECEC;
+  --color-textMuted: #9D9A96;
+
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-textMain font-sans;
+  }
+}
+
+.card {
+  @apply bg-surface rounded-xl border border-white/10 shadow-lg;
+}
+
+.btn-primary {
+  @apply bg-primary hover:bg-white text-black font-semibold py-2 px-4 rounded-lg transition-colors focus:ring-2 focus:ring-primary/50 outline-none;
+}
+
+.btn-secondary {
+  @apply bg-surface hover:bg-white/10 border border-white/20 text-textMain font-medium py-2 px-4 rounded-lg transition-colors focus:ring-2 focus:ring-white/20 outline-none;
+}
